@@ -1,0 +1,19 @@
+What's New in the Schema?
+
+* 2015.04.02
+	* Updated list of esri_arcpytype-vals.
+	* Added "qml" & "swift" as available esri_codeblocktype.
+	* New tag "esri_gptoolboxlabel".
+* 2014.06.05
+	* esri_paramcategory & esri_gptoolsetname tags added.
+* 2014.04.25
+	* esri_enumlabel* & esri_derived* tags added.
+	* Updated child element definition of esri_questionanswers tag.
+* 2013.08.20
+	* xref added as a valid child of esri_codeph.
+	* Added esri_twitterappid as an attribute to the esri_gizmo_textbox tag.
+* 2012.10.11
+	* "Function" & "Generator" have been added to the list of values for arcpy types.
+	* "javascript" has been added to the list of code block types.
+	* "ParallelProcessingFactor" has been added as a choice in teh esri_env attribute.
+	* Three new elements have been added (esri_codeph, esri_fieldname, esri_path).

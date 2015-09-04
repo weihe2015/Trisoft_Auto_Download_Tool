@@ -1,0 +1,95 @@
+<!-- ============================================================= -->
+<!--                    HEADER                                     -->
+<!-- ============================================================= -->
+<!--  MODULE:    ESRI Definition DTD                                  -->
+<!--  VERSION:   1.1                                               -->
+<!--  DATE:      May 2009                                     -->
+<!--                                                               -->
+<!-- ============================================================= -->
+
+<!-- ============================================================= -->
+<!--                    PUBLIC DOCUMENT TYPE DEFINITION            -->
+<!--                    TYPICAL INVOCATION                         -->
+<!--                                                               -->
+<!--  Refer to this file by the following public identifier or an 
+      appropriate system identifier 
+PUBLIC "-//ESRI//DTD DITA ESRI_Definition//EN"
+      Delivered as file "esri_definition.dtd"                              -->
+
+<!-- The public ID above refers to the latest version of this DTD.
+     To refer to this specific version, you may use this value:
+PUBLIC "-//ESRI//DTD DITA 1.1 ESRI_Definition//EN"                        -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-dec     PUBLIC 
+"-//OASIS//ENTITIES DITA Highlight Domain//EN" 
+"../../dita-oasis/1.1/highlightDomain.ent"                                                >
+%hi-d-dec;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % ph           "ph      |  %hi-d-ph;">
+                                    
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+<!ENTITY % props-attribute-extensions  ""                            >
+<!ENTITY % base-attribute-extensions   ""                            >
+
+
+<!-- ============================================================= -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ============================================================= -->
+<!--                    Redefine the infotype entity to exclude 
+                        other topic types and disallow nesting     -->
+
+<!ENTITY % esri_definition-info-types "esri_definition">
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                        "&hi-d-att;"               >
+
+<!-- ============================================================= -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % topic-type PUBLIC 
+"-//OASIS//ELEMENTS DITA Topic//EN" 
+"../../dita-oasis/1.1/topic.mod">
+%topic-type;
+
+<!ENTITY % esri_definition-typemod PUBLIC 
+"-//ESRI//ELEMENTS DITA ESRI_Definition//EN" 
+"esri_definition.mod">
+  %esri_definition-typemod;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-def     PUBLIC 
+"-//OASIS//ELEMENTS DITA Highlight Domain//EN" 
+"../../dita-oasis/1.1/highlightDomain.mod"                                         >
+%hi-d-def;
+
+<!-- ================== End DITA ESRI_Definition DTD  ==================== -->

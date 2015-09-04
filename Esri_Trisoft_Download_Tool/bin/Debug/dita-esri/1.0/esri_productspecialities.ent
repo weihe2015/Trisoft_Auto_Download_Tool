@@ -1,0 +1,26 @@
+<!ENTITY % esri_productspeciality-att     
+                       'esri_productspeciality  (
+                                                       None |
+                                                       ArcMap |
+                                                       ArcCatalog |
+                                                       ArcGlobe |
+                                                       ArcScene |
+                                                       ArcToolbox |
+                                                       ArcReader |
+                                                       ArcSDE |
+                                                       ArcGISServer |
+                                                       ArcGISDesktop |
+                                                       ArcGISEngine |
+                                                       ArcGISExplorer |
+                                                       ArcGISOnline |
+                                                       ESRIDataAndMaps |
+                                                       SituationalAwareness |
+                                                       StreetMapPremium |
+                                                       ArcGISMobile |
+                                                       ArcPad |
+                                                       Silverlight |
+                                                       Flex |
+                                                       Javascript |
+                                                       Java |
+                                                       dotNet |
+                                                       EDN)  "None"'                 >

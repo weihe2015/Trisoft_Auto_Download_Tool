@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5">
+      <s:element name="GetList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutputFormatId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetadata" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutOutputEDT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutOutputEDT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutputFormatId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutputFormatName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutOutputFormatId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutputFormatIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOutputFormatIdResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutOutputFormatId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutputFormatName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutputFormatId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutOutputFormatName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOutputFormatNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOutputFormatNameResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutOutputFormatName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetList" />
+  </wsdl:message>
+  <wsdl:message name="GetListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOutputFormatIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOutputFormatId" />
+  </wsdl:message>
+  <wsdl:message name="GetOutputFormatIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOutputFormatIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOutputFormatNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOutputFormatName" />
+  </wsdl:message>
+  <wsdl:message name="GetOutputFormatNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOutputFormatNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OutputFormat25Soap">
+    <wsdl:operation name="GetList">
+      <wsdl:input message="tns:GetListSoapIn" />
+      <wsdl:output message="tns:GetListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input message="tns:GetMetaDataSoapIn" />
+      <wsdl:output message="tns:GetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutputFormatId">
+      <wsdl:input message="tns:GetOutputFormatIdSoapIn" />
+      <wsdl:output message="tns:GetOutputFormatIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOutputFormatName">
+      <wsdl:input message="tns:GetOutputFormatNameSoapIn" />
+      <wsdl:output message="tns:GetOutputFormatNameSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OutputFormat25Soap" type="tns:OutputFormat25Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetList">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutputFormatId">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetOutputFormatId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutputFormatName">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetOutputFormatName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OutputFormat25Soap12" type="tns:OutputFormat25Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetList">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutputFormatId">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetOutputFormatId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOutputFormatName">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:OutputFormat:2.5/GetOutputFormatName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OutputFormat25">
+    <wsdl:port name="OutputFormat25Soap" binding="tns:OutputFormat25Soap">
+      <soap:address location="http://trisoftcms4/InfoShareWS/OutputFormat25.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OutputFormat25Soap12" binding="tns:OutputFormat25Soap12">
+      <soap12:address location="http://trisoftcms4/InfoShareWS/OutputFormat25.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

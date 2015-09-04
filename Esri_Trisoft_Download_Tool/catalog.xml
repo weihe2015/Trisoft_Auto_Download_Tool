@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+	<!-- Catalog.xml is not used in the Dita-OT environment, catalog-dita.xml is used instead -->
+	<!-- This catalog only holds a reference to catalog-dita.xml  -->
+	<!-- Reason: third party software Dita-OT - dost.jar has a hardcoded filename 'catalog-dita.xml'. 
+				The path is set in "App\Utilities\DITA-OT1.1.1\pretargets.xml"   -->
+	<nextCatalog catalog="catalog-dita.xml" />
+</catalog>

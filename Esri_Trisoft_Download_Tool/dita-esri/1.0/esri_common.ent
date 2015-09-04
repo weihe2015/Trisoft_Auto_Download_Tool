@@ -1,0 +1,17 @@
+<!-- ============================================================= -->
+<!--                    ELEMENT NAME ENTITIES                      -->
+<!-- ============================================================= -->
+
+<!ENTITY % esri_authornotes          "esri_authornotes" >
+<!ENTITY % esri_prolog          "esri_prolog" >
+<!ENTITY % esri_extensions      "esri_extensions" >
+<!ENTITY % esri_extension       "esri_extension" >
+<!ENTITY % esri_keywords       "esri_keywords" >
+<!ENTITY % esri_indexterms       "esri_indexterms" >
+<!ENTITY % esri_indexterm1       "esri_indexterm1" >
+<!ENTITY % esri_indexterm2       "esri_indexterm2" >
+
+<!ENTITY % esri_migration       "esri_migration" >
+<!ENTITY % esri_cstag       "esri_cstag" >
+
+<!-- ================== End Common Element Entities ============== -->

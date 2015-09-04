@@ -1,0 +1,60 @@
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % mapgroup-d-dec PUBLIC 
+"-//OASIS//ENTITIES DITA Map Group Domain//EN" 
+"../../dita-oasis/1.1/mapGroup.ent"                                                       >
+%mapgroup-d-dec;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+<!ENTITY % topicref     "topicref | %mapgroup-d-topicref;"           >
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+<!ENTITY % props-attribute-extensions  ""                            >
+<!ENTITY % base-attribute-extensions   ""                            >
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+<!ENTITY included-domains "&mapgroup-d-att;"                             >
+
+<!-- ============================================================= -->
+<!--                    MAP ELEMENT INTEGRATION                    -->
+<!-- ============================================================= -->
+
+<!ENTITY % map-type PUBLIC 
+"-//OASIS//ELEMENTS DITA Map//EN" 
+"../../dita-oasis/1.1/map.mod"                                                            >
+%map-type;
+
+<!ENTITY % esri_arcpymap-type PUBLIC 
+"-//ESRI//ELEMENTS DITA ArcPyMap//EN" 
+"esri_arcpymap.mod"                                                        >
+%esri_arcpymap-type;
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % mapgroup-d-def  
+                        PUBLIC 
+"-//OASIS//ELEMENTS DITA Map Group Domain//EN" 
+"../../dita-oasis/1.1/mapGroup.mod"                                                       >
+%mapgroup-d-def;
+
+<!-- ================== End DITA Bookmap DTD  ==================== -->

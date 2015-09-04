@@ -1,0 +1,205 @@
+-- ...................................................................... --
+-- IN THIS OASIS XML CATALOG:                                             --
+--   [A] XML Catalog data for IBM DITA V1.3.2 [compatibility,depricated]  --
+--   [B] XML Catalog data for OASIS DITA V1.0 [compatibility,depricated]  --
+--   [C] XML Catalog data for OASIS DITA V1.1                             --
+--   [D] XML Catalog data for OASIS version-less DITA pointing to latest  --
+-- GENERAL NOTES:                                                         --
+--   1. IBM DITA should be replaced with OASIS DITA as much as possible   --
+--   2. OASIS DITA 1.1 is stated to be fully backward compatible with     --
+--      OASIS DITA 1.0. All version-less public identifiers are           --
+--      redirected to this latest version system file path. Note that     --
+--      the regular publicId doesn't contain a version number.            --
+--   3. OASIS DITA 1.0 and 1.1 public identifiers containing a version    --
+--      are added to allow explicit DTD usage.                            --
+--   4. DITA Composite is disabled since it makes no sense from Trisoft   --
+--      InfoShare perspective to group topics into one object/file.       --
+-- HISTORY:                                                               --
+--   20070521/DDM Creation and case-sensitive verification of all         --
+--     publicIds present in this catalog-dita.xml file.                   --
+--   20070521/DDM Disabled composite ditabase and IBM BookMap.            --
+--   20070807/DDM Rearranged the OASIS section into version 1.0, version  --
+--     1.1 and version-less section.                                      --
+--   20090106/BVC Enabled ditabase                                        --
+-- ...................................................................... --
+-- ...................................................................... --
+-- [A] XML Catalog data for IBM DITA V1.3.2  ............................ --
+-- Base DITA --
+-- 20070521/DDM                                                           --
+-- Disabled DTD because writing multiple subjects into one file should    --
+-- always be avoided in InfoShare                                         --
+PUBLIC "-//IBM//DTD DITA Composite//EN" "dita-ibm/1.3.2/ditabase.dtd"
+PUBLIC "-//IBM//DTD DITA Concept//EN" "dita-ibm/1.3.2/concept.dtd"
+PUBLIC "-//IBM//ELEMENTS DITA Concept//EN" "dita-ibm/1.3.2/concept.mod"
+PUBLIC "-//IBM//DTD DITA Map//EN" "dita-ibm/1.3.2/map.dtd"
+PUBLIC "-//IBM//ELEMENTS DITA Map//EN" "dita-ibm/1.3.2/map.mod"
+PUBLIC "-//IBM//ENTITIES DITA Map Group Domain//EN" "dita-ibm/1.3.2/mapgroup.ent"
+PUBLIC "-//IBM//ELEMENTS DITA Map Group Domain//EN" "dita-ibm/1.3.2/mapgroup.mod"
+PUBLIC "-//IBM//DTD DITA Topic//EN" "dita-ibm/1.3.2/topic.dtd"
+PUBLIC "-//IBM//ELEMENTS DITA Topic//EN" "dita-ibm/1.3.2/topic.mod"
+PUBLIC "-//IBM//DTD DITA Reference//EN" "dita-ibm/1.3.2/reference.dtd"
+PUBLIC "-//IBM//ELEMENTS DITA Reference//EN" "dita-ibm/1.3.2/reference.mod"
+PUBLIC "-//IBM//DTD DITA Task//EN" "dita-ibm/1.3.2/task.dtd"
+PUBLIC "-//IBM//ELEMENTS DITA Task//EN" "dita-ibm/1.3.2/task.mod"
+PUBLIC "-//IBM//ENTITIES DITA Topic Class//EN" "dita-ibm/1.3.2/topic_class.ent"
+PUBLIC "-//IBM//ENTITIES DITA Topic Definitions//EN" "dita-ibm/1.3.2/topic_defn.ent"
+-- DITA Domains --
+PUBLIC "-//IBM//ELEMENTS DITA Highlight Domain//EN" "dita-ibm/1.3.2/highlight-domain.mod"
+PUBLIC "-//IBM//ENTITIES DITA Highlight Domain//EN" "dita-ibm/1.3.2/highlight-domain.ent"
+PUBLIC "-//IBM//ELEMENTS DITA Programming Domain//EN" "dita-ibm/1.3.2/programming-domain.mod"
+PUBLIC "-//IBM//ENTITIES DITA Programming Domain//EN" "dita-ibm/1.3.2/programming-domain.ent"
+PUBLIC "-//IBM//ELEMENTS DITA Software Domain//EN" "dita-ibm/1.3.2/software-domain.mod"
+PUBLIC "-//IBM//ENTITIES DITA Software Domain//EN" "dita-ibm/1.3.2/software-domain.ent"
+PUBLIC "-//IBM//ELEMENTS DITA User Interface Domain//EN" "dita-ibm/1.3.2/ui-domain.mod"
+PUBLIC "-//IBM//ENTITIES DITA User Interface Domain//EN" "dita-ibm/1.3.2/ui-domain.ent"
+PUBLIC "-//IBM//ELEMENTS DITA Utilities Domain//EN" "dita-ibm/1.3.2/utilities-domain.mod"
+PUBLIC "-//IBM//ENTITIES DITA Utilities Domain//EN" "dita-ibm/1.3.2/utilities-domain.ent"
+-- DITA Common --
+PUBLIC "-//IBM//ELEMENTS DITA Metadata//EN" "dita-ibm/1.3.2/meta_xml.mod"
+PUBLIC "-//IBM//ELEMENTS DITA CALS Tables//EN" "dita-ibm/1.3.2/tbl_xml.mod"
+-- DITA Specializations --
+-- 20070521/DDM                                                           --
+-- Disabled DTDs because it is the IBM Bookmap and the standard will      --
+-- BECOME OASIS                                                           --
+-- PUBLIC "-//IBM//DTD DITA BookMap//EN" "dita-ibm/1.3.2/bookmap.dtd"              --
+-- PUBLIC "-//IBM//ELEMENTS DITA BookMap//EN" "dita-ibm/1.3.2/bookmap.mod"         --
+-- PUBLIC "-//IBM//DTD DITA Book Information//EN" "dita-ibm/1.3.2/bkinfo.dtd"      --
+-- PUBLIC "-//IBM//ELEMENTS DITA Book Information//EN" "dita-ibm/1.3.2/bkinfo.mod" --
+-- End of XML Catalog data for DITA V1.3.2  ............................. --
+-- ...................................................................... --
+-- ...................................................................... --
+-- [B] XML Catalog data for OASIS DITA V1.0  ............................ --
+-- Base DITA --
+PUBLIC "-//OASIS//DTD DITA 1.0 Composite//EN" "dita-oasis/1.0/ditabase.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Concept//EN" "dita-oasis/1.0/concept.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Reference//EN" "dita-oasis/1.0/reference.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Task//EN" "dita-oasis/1.0/task.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Topic//EN" "dita-oasis/1.0/topic.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.0 Map//EN" "dita-oasis/1.0/map.dtd"
+PUBLIC "-//OASIS//ELEMENTS 1.0 DITA Metadata//EN" "dita-oasis/1.0/metaDecl.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Topic Class//EN" "dita-oasis/1.0/topicAttr.mod"-- topicAttr.mod is only used in DITA 1.0 --
+-- DITA Specializations --
+PUBLIC "-//Trisoft//DTD DITA 1.0 Apiref//EN" "dita-oasis/1.0/apiref.dtd"
+-- End of XML Catalog data for OASIS DITA V1.0 .......................... --
+-- ...................................................................... --
+-- ...................................................................... --
+-- [C] XML Catalog data for OASIS DITA V1.1  ............................ --
+PUBLIC "-//OASIS//DTD DITA 1.1 Composite//EN" "dita-oasis/1.1/ditabase.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Topic//EN" "dita-oasis/1.1/topic.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Task//EN" "dita-oasis/1.1/task.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Reference//EN" "dita-oasis/1.1/reference.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Map//EN" "dita-oasis/1.1/map.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Glossary//EN" "dita-oasis/1.1/glossary.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 Concept//EN" "dita-oasis/1.1/concept.dtd"
+PUBLIC "-//OASIS//DTD DITA 1.1 BookMap//EN" "dita-oasis/1.1/bookmap.dtd"
+-- DITA Specializations --
+PUBLIC "-//Trisoft//DTD DITA 1.1 Apiref//EN" "dita-oasis/1.1/apiref.dtd"
+-- End of XML Catalog data for OASIS DITA V1.1 .......................... --
+-- ...................................................................... --
+-- ...................................................................... --
+-- [D] XML Catalog data for OASIS version-less DITA pointing to latest .. --	
+-- DITA Topics --
+PUBLIC "-//OASIS//DTD DITA Composite//EN" "dita-oasis/1.1/ditabase.dtd"
+PUBLIC "-//OASIS//DTD DITA Concept//EN" "dita-oasis/1.1/concept.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA Concept//EN" "dita-oasis/1.1/concept.mod"
+PUBLIC "-//OASIS//DTD DITA Glossary//EN" "dita-oasis/1.1/glossary.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA Glossary//EN" "dita-oasis/1.1/glossary.mod"
+PUBLIC "-//OASIS//DTD DITA Reference//EN" "dita-oasis/1.1/reference.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA Reference//EN" "dita-oasis/1.1/reference.mod"
+PUBLIC "-//OASIS//DTD DITA Task//EN" "dita-oasis/1.1/task.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA Task//EN" "dita-oasis/1.1/task.mod"
+PUBLIC "-//OASIS//DTD DITA Topic//EN" "dita-oasis/1.1/topic.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA Topic//EN" "dita-oasis/1.1/topic.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Topic Definitions//EN" "dita-oasis/1.1/topicDefn.ent"
+-- DITA Maps --
+PUBLIC "-//OASIS//DTD DITA Map//EN" "dita-oasis/1.1/map.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA Map//EN" "dita-oasis/1.1/map.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Map Group Domain//EN" "dita-oasis/1.1/mapGroup.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA Map Group Domain//EN" "dita-oasis/1.1/mapGroup.mod"	
+PUBLIC "-//OASIS//DTD DITA BookMap//EN" "dita-oasis/1.1/bookmap.dtd"
+PUBLIC "-//OASIS//ELEMENTS DITA BookMap//EN" "dita-oasis/1.1/bookmap.mod"
+-- DITA Domains --
+PUBLIC "-//OASIS//ELEMENTS DITA Highlight Domain//EN" "dita-oasis/1.1/highlightDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Highlight Domain//EN" "dita-oasis/1.1/highlightDomain.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA Indexing Domain//EN" "dita-oasis/1.1/indexingDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Indexing Domain//EN" "dita-oasis/1.1/indexingDomain.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA Programming Domain//EN" "dita-oasis/1.1/programmingDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Programming Domain//EN" "dita-oasis/1.1/programmingDomain.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA Software Domain//EN" "dita-oasis/1.1/softwareDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Software Domain//EN" "dita-oasis/1.1/softwareDomain.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA User Interface Domain//EN" "dita-oasis/1.1/uiDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA User Interface Domain//EN" "dita-oasis/1.1/uiDomain.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA Utilities Domain//EN" "dita-oasis/1.1/utilitiesDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Utilities Domain//EN" "dita-oasis/1.1/utilitiesDomain.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA XNAL Domain//EN" "dita-oasis/1.1/xnalDomain.mod"
+PUBLIC "-//OASIS//ENTITIES DITA XNAL Domain//EN" "dita-oasis/1.1/xnalDomain.ent"
+-- DITA Common --
+PUBLIC "-//OASIS//ELEMENTS DITA Common Elements//EN" "dita-oasis/1.1/commonElements.mod"
+PUBLIC "-//OASIS//ENTITIES DITA Common Elements//EN" "dita-oasis/1.1/commonElements.ent"
+PUBLIC "-//OASIS//ELEMENTS DITA Metadata//EN" "dita-oasis/1.1/metaDecl.mod"
+PUBLIC "-//OASIS//ELEMENTS DITA Exchange Table Model//EN" "dita-oasis/1.1/tblDecl.mod"
+PUBLIC "-//OASIS//ELEMENTS DITA CALS Tables//EN" "dita-oasis/1.1/tblDecl.mod"
+-- DITA Specializations --
+PUBLIC "-//Trisoft//DTD DITA Apiref//EN" "dita-oasis/1.1/apiref.dtd"
+PUBLIC "-//Trisoft//ELEMENTS DITA Apiref//EN" "dita-oasis/1.1/apiref.mod"
+-- End of XML Catalog data for OASIS version-less DITA pointing to latest --	
+
+-- ESRI --
+
+-- shared --
+
+PUBLIC "-//ESRI//ELEMENTS DITA Common//EN" "dita-esri/1.0/esri_common.mod"
+PUBLIC "-//ESRI//ENTITIES DITA Common//EN" "dita-esri/1.0/esri_common.ent"
+
+PUBLIC "-//ESRI//ELEMENTS DITA API Common//EN" "dita-esri/1.0/esri_apicommon.mod"
+PUBLIC "-//ESRI//ENTITIES DITA API Common//EN" "dita-esri/1.0/esri_apicommon.ent"
+
+-- domain --
+
+PUBLIC "-//ESRI//ELEMENTS DITA General Domain//EN" "dita-esri/1.0/esri_generaldomain.mod"
+PUBLIC "-//ESRI//ENTITIES DITA General Domain//EN" "dita-esri/1.0/esri_generaldomain.ent"
+
+PUBLIC "-//ESRI//ELEMENTS DITA UI Domain//EN" "dita-esri/1.0/esri_uidomain.mod"
+PUBLIC "-//ESRI//ENTITIES DITA UI Domain//EN" "dita-esri/1.0/esri_uidomain.ent"
+
+PUBLIC "-//ESRI//ELEMENTS DITA Widget Domain//EN" "dita-esri/1.0/esri_widgetdomain.mod"
+PUBLIC "-//ESRI//ENTITIES DITA Widget Domain//EN" "dita-esri/1.0/esri_widgetdomain.ent"
+
+-- topics --
+
+PUBLIC "-//ESRI//ELEMENTS DITA ArcpyFunction//EN" "dita-esri/1.0/esri_arcpyfunction.mod"
+PUBLIC "-//ESRI//DTD DITA ArcpyFunction//EN" "dita-esri/1.0/esri_arcpyfunction.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA ArcpyProperty//EN" "dita-esri/1.0/esri_arcpyproperty.mod"
+PUBLIC "-//ESRI//DTD DITA ArcpyProperty//EN" "dita-esri/1.0/esri_arcpyproperty.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA ArcpyClass//EN" "dita-esri/1.0/esri_arcpyclass.mod"
+PUBLIC "-//ESRI//DTD DITA ArcpyClass//EN" "dita-esri/1.0/esri_arcpyclass.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA Concept//EN" "dita-esri/1.0/esri_concept.mod"
+PUBLIC "-//ESRI//DTD DITA Concept//EN" "dita-esri/1.0/esri_concept.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA GPTool//EN" "dita-esri/1.0/esri_gptool.mod"
+PUBLIC "-//ESRI//DTD DITA GPTool//EN" "dita-esri/1.0/esri_gptool.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA Task//EN" "dita-esri/1.0/esri_task.mod"
+PUBLIC "-//ESRI//DTD DITA Task//EN" "dita-esri/1.0/esri_task.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA Workflow//EN" "dita-esri/1.0/esri_workflow.mod"
+PUBLIC "-//ESRI//DTD DITA Workflow//EN" "dita-esri/1.0/esri_workflow.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA ArcPyMap//EN" "dita-esri/1.0/esri_arcpymap.mod"
+PUBLIC "-//ESRI//DTD DITA ArcPyMap//EN" "dita-esri/1.0/esri_arcpymap.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA GPToolboxMap//EN" "dita-esri/1.0/esri_gptoolboxmap.mod"
+PUBLIC "-//ESRI//DTD DITA GPToolboxMap//EN" 	 "dita-esri/1.0/esri_gptoolboxmap.dtd"
+
+-- glossary: tchen: the doctype pattern does not conform to the other schema --
+
+PUBLIC "-//ESRI//ELEMENTS DITA ESRI_Term//EN" "dita-esri/1.0/esri_term.mod"
+PUBLIC "-//ESRI//DTD DITA ESRI_Term//EN" "dita-esri/1.0/esri_term.dtd"
+
+PUBLIC "-//ESRI//ELEMENTS DITA ESRI_Definition//EN" "dita-esri/1.0/esri_definition.mod"
+PUBLIC "-//ESRI//DTD DITA ESRI_Definition//EN" "dita-esri/1.0/esri_definition.dtd"
+
+

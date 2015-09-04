@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5">
+      <s:element name="GetPossibleTargetStatuses">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPossibleTargetStatusesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPossibleTargetStatusesResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLLovValueList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTranslationJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLTranslationJobContainerList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLTranslationJobWorkflowList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTranslationJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTranslationJobResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLTranslationJobContainerList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLTranslationJobWorkflowList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveMetaData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasTranslationJobIds" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RetrieveMetaDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMetaDataResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Find">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetadataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FindResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLObjList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveTranslationJobItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedTranslationJobItemData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLTranslationJobItemList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveTranslationJobItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveTranslationJobItemsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLTranslationJobItemList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveExternalTranslationJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLExternalTranslationJobList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveExternalTranslationJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveExternalTranslationJobsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLExternalTranslationJobList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTranslationJob">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasWriteAccess" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasReadAccess" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLTranslationJobContainerList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLTranslationJobWorkflowList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutTranslationJobId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTranslationJobResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTranslationJobResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutTranslationJobId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranslationJob3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasWriteAccess" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasReadAccess" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLTranslationJobContainerList" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLTranslationJobWorkflowList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranslationJob3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTranslationJob3Result" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMetaData3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMetaData3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMetaData3Result" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTranslationJobItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLTranslationJobItemList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTranslationJobItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTranslationJobItemsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranslationJobItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLTranslationJobItemList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTranslationJobItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateTranslationJobItemsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTranslationJobItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTranslationJobItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteTranslationJobItemsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateExternalTranslationJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLExternalTranslationJobList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateExternalTranslationJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateExternalTranslationJobsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteExternalTranslationJobs">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psTranslationJobId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequiredCurrentMetaData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteExternalTranslationJobsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteExternalTranslationJobsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPossibleTargetStatusesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPossibleTargetStatuses" />
+  </wsdl:message>
+  <wsdl:message name="GetPossibleTargetStatusesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPossibleTargetStatusesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GetMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTranslationJobSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTranslationJob" />
+  </wsdl:message>
+  <wsdl:message name="GetTranslationJobSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTranslationJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetaDataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMetaData" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetaDataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMetaDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapIn">
+    <wsdl:part name="parameters" element="tns:Find" />
+  </wsdl:message>
+  <wsdl:message name="FindSoapOut">
+    <wsdl:part name="parameters" element="tns:FindResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveTranslationJobItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveTranslationJobItems" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveTranslationJobItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveTranslationJobItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveExternalTranslationJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveExternalTranslationJobs" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveExternalTranslationJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveExternalTranslationJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTranslationJobSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTranslationJob" />
+  </wsdl:message>
+  <wsdl:message name="CreateTranslationJobSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTranslationJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTranslationJob3SoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTranslationJob3" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTranslationJob3SoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTranslationJob3Response" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:Delete" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMetaData3SoapIn">
+    <wsdl:part name="parameters" element="tns:SetMetaData3" />
+  </wsdl:message>
+  <wsdl:message name="SetMetaData3SoapOut">
+    <wsdl:part name="parameters" element="tns:SetMetaData3Response" />
+  </wsdl:message>
+  <wsdl:message name="CreateTranslationJobItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTranslationJobItems" />
+  </wsdl:message>
+  <wsdl:message name="CreateTranslationJobItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTranslationJobItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTranslationJobItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTranslationJobItems" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTranslationJobItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTranslationJobItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTranslationJobItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTranslationJobItems" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTranslationJobItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTranslationJobItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateExternalTranslationJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateExternalTranslationJobs" />
+  </wsdl:message>
+  <wsdl:message name="CreateExternalTranslationJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateExternalTranslationJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteExternalTranslationJobsSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteExternalTranslationJobs" />
+  </wsdl:message>
+  <wsdl:message name="DeleteExternalTranslationJobsSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteExternalTranslationJobsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TranslationJob25Soap">
+    <wsdl:operation name="GetPossibleTargetStatuses">
+      <wsdl:input message="tns:GetPossibleTargetStatusesSoapIn" />
+      <wsdl:output message="tns:GetPossibleTargetStatusesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <wsdl:input message="tns:GetMetaDataSoapIn" />
+      <wsdl:output message="tns:GetMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTranslationJob">
+      <wsdl:input message="tns:GetTranslationJobSoapIn" />
+      <wsdl:output message="tns:GetTranslationJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <wsdl:input message="tns:RetrieveMetaDataSoapIn" />
+      <wsdl:output message="tns:RetrieveMetaDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <wsdl:input message="tns:FindSoapIn" />
+      <wsdl:output message="tns:FindSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTranslationJobItems">
+      <wsdl:input message="tns:RetrieveTranslationJobItemsSoapIn" />
+      <wsdl:output message="tns:RetrieveTranslationJobItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveExternalTranslationJobs">
+      <wsdl:input message="tns:RetrieveExternalTranslationJobsSoapIn" />
+      <wsdl:output message="tns:RetrieveExternalTranslationJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationJob">
+      <wsdl:input message="tns:CreateTranslationJobSoapIn" />
+      <wsdl:output message="tns:CreateTranslationJobSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationJob3">
+      <wsdl:input message="tns:UpdateTranslationJob3SoapIn" />
+      <wsdl:output message="tns:UpdateTranslationJob3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <wsdl:input message="tns:DeleteSoapIn" />
+      <wsdl:output message="tns:DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData3">
+      <wsdl:input message="tns:SetMetaData3SoapIn" />
+      <wsdl:output message="tns:SetMetaData3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationJobItems">
+      <wsdl:input message="tns:CreateTranslationJobItemsSoapIn" />
+      <wsdl:output message="tns:CreateTranslationJobItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationJobItems">
+      <wsdl:input message="tns:UpdateTranslationJobItemsSoapIn" />
+      <wsdl:output message="tns:UpdateTranslationJobItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTranslationJobItems">
+      <wsdl:input message="tns:DeleteTranslationJobItemsSoapIn" />
+      <wsdl:output message="tns:DeleteTranslationJobItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExternalTranslationJobs">
+      <wsdl:input message="tns:CreateExternalTranslationJobsSoapIn" />
+      <wsdl:output message="tns:CreateExternalTranslationJobsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExternalTranslationJobs">
+      <wsdl:input message="tns:DeleteExternalTranslationJobsSoapIn" />
+      <wsdl:output message="tns:DeleteExternalTranslationJobsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TranslationJob25Soap" type="tns:TranslationJob25Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPossibleTargetStatuses">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/GetPossibleTargetStatuses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTranslationJob">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/GetTranslationJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/RetrieveMetaData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/Find" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTranslationJobItems">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/RetrieveTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveExternalTranslationJobs">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/RetrieveExternalTranslationJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationJob">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/CreateTranslationJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationJob3">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/UpdateTranslationJob3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData3">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/SetMetaData3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationJobItems">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/CreateTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationJobItems">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/UpdateTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTranslationJobItems">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/DeleteTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExternalTranslationJobs">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/CreateExternalTranslationJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExternalTranslationJobs">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/DeleteExternalTranslationJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TranslationJob25Soap12" type="tns:TranslationJob25Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPossibleTargetStatuses">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/GetPossibleTargetStatuses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/GetMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTranslationJob">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/GetTranslationJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveMetaData">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/RetrieveMetaData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Find">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/Find" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveTranslationJobItems">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/RetrieveTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveExternalTranslationJobs">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/RetrieveExternalTranslationJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationJob">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/CreateTranslationJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationJob3">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/UpdateTranslationJob3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Delete">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMetaData3">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/SetMetaData3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationJobItems">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/CreateTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationJobItems">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/UpdateTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTranslationJobItems">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/DeleteTranslationJobItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateExternalTranslationJobs">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/CreateExternalTranslationJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExternalTranslationJobs">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:TranslationJob:2.5/DeleteExternalTranslationJobs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TranslationJob25">
+    <wsdl:port name="TranslationJob25Soap" binding="tns:TranslationJob25Soap">
+      <soap:address location="https://sdlcms.esri.com/infosharews/TranslationJob25.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TranslationJob25Soap12" binding="tns:TranslationJob25Soap12">
+      <soap12:address location="https://sdlcms.esri.com/infosharews/TranslationJob25.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

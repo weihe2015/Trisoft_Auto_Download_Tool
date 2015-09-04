@@ -1,0 +1,23 @@
+<!-- ============================================================= -->
+<!--                    HIGHLIGHT DOMAIN ENTITIES                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % esri_general-d-fig     " esri_image | esri_sidebysidemedia | esri_sqltableinfo "                 >
+
+<!ENTITY % esri_general-d-note     " esri_callout | esri_gallery | esri_note "                 >
+
+<!ENTITY % esri_general-d-pre       " esri_codeblock | esri_equation "            >
+
+<!ENTITY % esri_general-d-ul     " esri_seealso "                 >
+
+<!ENTITY % esri_general-d-keyword       " esri_glossary | esri_gptoolref | esri_arcpyref | esri_modelbuilder "  >
+<!ENTITY % esri_general-d-ph " esri_externalfile " >
+
+<!-- !ENTITY % esri_general-d-xref       "esri_glossary"             -->
+
+<!ENTITY % esri_general-d-xref       " esri_pdf | esri_flash "               >
+
+<!ENTITY   esri_general-d-att     "(topic esri_general-d)"      >
+
+
+<!-- ================== End Highlight Domain Entities ============ -->

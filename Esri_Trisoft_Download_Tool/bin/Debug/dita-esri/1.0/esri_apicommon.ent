@@ -1,0 +1,30 @@
+<!-- ============================================================= -->
+<!--                    ELEMENT NAME ENTITIES                      -->
+<!-- ============================================================= -->
+
+<!ENTITY % esri_deprecatedat  "esri_deprecatedat">
+
+<!ENTITY % esri_enumtable               "esri_enumtable" >
+<!ENTITY % esri_enumhead                "esri_enumhead" >
+<!ENTITY % esri_enumvaluehd             "esri_enumvaluehd" >
+<!ENTITY % esri_enumdeschd              "esri_enumdeschd" >
+<!ENTITY % esri_enumrow                 "esri_enumrow" >
+<!ENTITY % esri_enumvalue               "esri_enumvalue" >
+<!ENTITY % esri_enumdesc                "esri_enumdesc" >
+
+<!ENTITY % esri_enumlabeltable          "esri_enumlabeltable" >
+<!ENTITY % esri_enumlabelhead           "esri_enumlabelhead" >
+<!ENTITY % esri_enumlabelnamehd         "esri_enumlabelnamehd" >
+<!ENTITY % esri_enumlabelimagehd        "esri_enumlabelimagehd" >
+<!ENTITY % esri_enumlabelvaluehd        "esri_enumlabelvaluehd" >
+<!ENTITY % esri_enumlabelrow            "esri_enumlabelrow" >
+<!ENTITY % esri_enumlabelname           "esri_enumlabelname" >
+<!ENTITY % esri_enumlabelimage          "esri_enumlabelimage" >
+<!ENTITY % esri_enumlabelvalue          "esri_enumlabelvalue" >
+
+<!ENTITY % esri_codesamples    "esri_codesamples" >
+
+<!ENTITY % esri_desc                 "esri_desc" >
+<!ENTITY % esri_discussion      "esri_discussion" >
+
+<!-- ================== End Common Element Entities ============== -->

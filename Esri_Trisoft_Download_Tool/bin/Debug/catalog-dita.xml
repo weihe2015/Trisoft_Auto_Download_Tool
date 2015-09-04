@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
+  <!-- ...................................................................... -->
+  <!-- IN THIS OASIS XML CATALOG:                                             -->
+  <!--   [A] XML Catalog data for IBM DITA V1.3.2 [compatibility,depricated]  -->
+  <!--   [B] XML Catalog data for OASIS DITA V1.0 [compatibility,depricated]  -->
+  <!--   [C] XML Catalog data for OASIS DITA V1.1                             -->
+  <!--   [D] XML Catalog data for OASIS version-less DITA pointing to latest  -->
+  <!-- GENERAL NOTES:                                                         -->
+  <!--   1. IBM DITA should be replaced with OASIS DITA as much as possible   -->
+  <!--   2. OASIS DITA 1.1 is stated to be fully backward compatible with     -->
+  <!--      OASIS DITA 1.0. All version-less public identifiers are           -->
+  <!--      redirected to this latest version system file path. Note that     -->
+	<!--      the regular publicId doesn't contain a version number.            -->
+  <!--   3. OASIS DITA 1.0 and 1.1 public identifiers containing a version    -->
+  <!--      are added to allow explicit DTD usage.                            -->
+  <!--   4. DITA Composite is disabled since it makes no sense from Trisoft   -->
+  <!--      InfoShare perspective to group topics into one object/file.       -->
+  <!--      20081201/DDM Activated for FI and Adobe FrameMaker 8.0 IAB        -->
+  <!-- HISTORY:                                                               -->
+  <!--   20070521/DDM Creation and case-sensitive verification of all         -->
+  <!--     publicIds present in this catalog-dita.xml file.                   -->
+  <!--   20070521/DDM Disabled composite ditabase and IBM BookMap.            -->
+  <!--   20070807/DDM Rearranged the OASIS section into version 1.0, version  -->
+  <!--     1.1 and version-less section.                                      -->
+  <!--   20081201/DDM Activated ditabase OASIS DITA 1.1 PublicId              -->
+  <!-- ...................................................................... -->
+	<!-- ...................................................................... -->
+	<!-- [A] XML Catalog data for IBM DITA V1.3.2  ............................ -->
+	<!-- Base DITA -->
+  <!-- 20070521/DDM                                                           -->
+  <!-- Disabled DTD because writing multiple subjects into one file should    -->
+  <!-- always be avoided in InfoShare                                         -->
+  <!-- <public publicId="-//IBM//DTD DITA Composite//EN" uri="dita-ibm/1.3.2/ditabase.dtd"/> -->
+  <!-- 20090106/BVC - Mantis 2294 - enabled ditabase                          -->
+	<public publicId="-//IBM//DTD DITA Concept//EN" uri="dita-ibm/1.3.2/concept.dtd"/>
+	<public publicId="-//IBM//ELEMENTS DITA Concept//EN" uri="dita-ibm/1.3.2/concept.mod"/>
+	<public publicId="-//IBM//DTD DITA Map//EN" uri="dita-ibm/1.3.2/map.dtd"/>
+	<public publicId="-//IBM//ELEMENTS DITA Map//EN" uri="dita-ibm/1.3.2/map.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA Map Group Domain//EN" uri="dita-ibm/1.3.2/mapgroup.ent"/>
+	<public publicId="-//IBM//ELEMENTS DITA Map Group Domain//EN" uri="dita-ibm/1.3.2/mapgroup.mod"/>
+	<public publicId="-//IBM//DTD DITA Topic//EN" uri="dita-ibm/1.3.2/topic.dtd"/>
+	<public publicId="-//IBM//ELEMENTS DITA Topic//EN" uri="dita-ibm/1.3.2/topic.mod"/>
+	<public publicId="-//IBM//DTD DITA Reference//EN" uri="dita-ibm/1.3.2/reference.dtd"/>
+	<public publicId="-//IBM//ELEMENTS DITA Reference//EN" uri="dita-ibm/1.3.2/reference.mod"/>
+	<public publicId="-//IBM//DTD DITA Task//EN" uri="dita-ibm/1.3.2/task.dtd"/>
+	<public publicId="-//IBM//ELEMENTS DITA Task//EN" uri="dita-ibm/1.3.2/task.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA Topic Class//EN" uri="dita-ibm/1.3.2/topic_class.ent"/>
+	<public publicId="-//IBM//ENTITIES DITA Topic Definitions//EN" uri="dita-ibm/1.3.2/topic_defn.ent"/>
+	<!-- DITA Domains -->
+	<public publicId="-//IBM//ELEMENTS DITA Highlight Domain//EN" uri="dita-ibm/1.3.2/highlight-domain.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA Highlight Domain//EN" uri="dita-ibm/1.3.2/highlight-domain.ent"/>
+	<public publicId="-//IBM//ELEMENTS DITA Programming Domain//EN" uri="dita-ibm/1.3.2/programming-domain.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA Programming Domain//EN" uri="dita-ibm/1.3.2/programming-domain.ent"/>
+	<public publicId="-//IBM//ELEMENTS DITA Software Domain//EN" uri="dita-ibm/1.3.2/software-domain.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA Software Domain//EN" uri="dita-ibm/1.3.2/software-domain.ent"/>
+	<public publicId="-//IBM//ELEMENTS DITA User Interface Domain//EN" uri="dita-ibm/1.3.2/ui-domain.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA User Interface Domain//EN" uri="dita-ibm/1.3.2/ui-domain.ent"/>
+	<public publicId="-//IBM//ELEMENTS DITA Utilities Domain//EN" uri="dita-ibm/1.3.2/utilities-domain.mod"/>
+	<public publicId="-//IBM//ENTITIES DITA Utilities Domain//EN" uri="dita-ibm/1.3.2/utilities-domain.ent"/>
+	<!-- DITA Common -->
+	<public publicId="-//IBM//ELEMENTS DITA Metadata//EN" uri="dita-ibm/1.3.2/meta_xml.mod"/>
+	<public publicId="-//IBM//ELEMENTS DITA CALS Tables//EN" uri="dita-ibm/1.3.2/tbl_xml.mod"/>
+	<!-- DITA Specializations -->
+  <!-- 20070521/DDM                                                           -->
+  <!-- Disabled DTDs because it is the IBM Bookmap and the standard will      -->
+  <!-- BECOME OASIS                                                           -->
+  <!-- <public publicId="-//IBM//DTD DITA BookMap//EN" uri="dita-ibm/1.3.2/bookmap.dtd"/>              -->
+  <!-- <public publicId="-//IBM//ELEMENTS DITA BookMap//EN" uri="dita-ibm/1.3.2/bookmap.mod"/>         -->
+  <!-- <public publicId="-//IBM//DTD DITA Book Information//EN" uri="dita-ibm/1.3.2/bkinfo.dtd"/>      -->
+  <!-- <public publicId="-//IBM//ELEMENTS DITA Book Information//EN" uri="dita-ibm/1.3.2/bkinfo.mod"/> -->
+	<!-- End of XML Catalog data for DITA V1.3.2  ............................. -->
+	<!-- ...................................................................... -->
+	<!-- ...................................................................... -->
+	<!-- [B] XML Catalog data for OASIS DITA V1.0  ............................ -->
+  <!-- Base DITA -->
+  <public publicId="-//OASIS//DTD DITA 1.0 Composite//EN" uri="dita-oasis/1.0/ditabase.dtd"/>
+  <public publicId="-//OASIS//DTD DITA 1.0 Concept//EN" uri="dita-oasis/1.0/concept.dtd"/>
+  <public publicId="-//OASIS//DTD DITA 1.0 Reference//EN" uri="dita-oasis/1.0/reference.dtd"/>
+  <public publicId="-//OASIS//DTD DITA 1.0 Task//EN" uri="dita-oasis/1.0/task.dtd"/>
+  <public publicId="-//OASIS//DTD DITA 1.0 Topic//EN" uri="dita-oasis/1.0/topic.dtd"/>
+  <public publicId="-//OASIS//DTD DITA 1.0 Map//EN" uri="dita-oasis/1.0/map.dtd"/>
+  <public publicId="-//OASIS//ENTITIES DITA Topic Class//EN" uri="dita-oasis/1.0/topicAttr.mod"/><!-- topicAttr.mod is only used in DITA 1.0 -->
+	<!-- DITA Specializations -->
+	<public publicId="-//Trisoft//DTD DITA 1.0 Apiref//EN" uri="dita-oasis/1.0/apiref.dtd"/>
+	<!-- End of XML Catalog data for OASIS DITA V1.0 .......................... -->
+	<!-- ...................................................................... -->
+	<!-- ...................................................................... -->
+	<!-- [C] XML Catalog data for OASIS DITA V1.1  ............................ -->
+	<public publicId="-//OASIS//DTD DITA 1.1 Composite//EN" uri="dita-oasis/1.1/ditabase.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 Topic//EN" uri="dita-oasis/1.1/topic.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 Task//EN" uri="dita-oasis/1.1/task.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 Reference//EN" uri="dita-oasis/1.1/reference.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 Map//EN" uri="dita-oasis/1.1/map.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 Glossary//EN" uri="dita-oasis/1.1/glossary.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 Concept//EN" uri="dita-oasis/1.1/concept.dtd"/>
+	<public publicId="-//OASIS//DTD DITA 1.1 BookMap//EN" uri="dita-oasis/1.1/bookmap.dtd"/>
+	<!-- DITA Specializations -->
+	<public publicId="-//Trisoft//DTD DITA 1.1 Apiref//EN" uri="dita-oasis/1.1/apiref.dtd"/>
+	<!-- End of XML Catalog data for OASIS DITA V1.1 .......................... -->
+	<!-- ...................................................................... -->
+	<!-- ...................................................................... -->
+	<!-- [D] XML Catalog data for OASIS version-less DITA pointing to latest .. -->	
+	<!-- DITA Topics -->                                                        
+	<public publicId="-//OASIS//DTD DITA Composite//EN" uri="dita-oasis/1.1/ditabase.dtd"/>
+	<public publicId="-//OASIS//DTD DITA Concept//EN" uri="dita-oasis/1.1/concept.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Concept//EN" uri="dita-oasis/1.1/concept.mod"/>
+	<public publicId="-//OASIS//DTD DITA Glossary//EN" uri="dita-oasis/1.1/glossary.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Glossary//EN" uri="dita-oasis/1.1/glossary.mod"/>
+	<public publicId="-//OASIS//DTD DITA Reference//EN" uri="dita-oasis/1.1/reference.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Reference//EN" uri="dita-oasis/1.1/reference.mod"/>
+	<public publicId="-//OASIS//DTD DITA Task//EN" uri="dita-oasis/1.1/task.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Task//EN" uri="dita-oasis/1.1/task.mod"/>
+	<public publicId="-//OASIS//DTD DITA Topic//EN" uri="dita-oasis/1.1/topic.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Topic//EN" uri="dita-oasis/1.1/topic.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Topic Definitions//EN" uri="dita-oasis/1.1/topicDefn.ent"/>
+	<!-- DITA Maps -->
+	<public publicId="-//OASIS//DTD DITA Map//EN" uri="dita-oasis/1.1/map.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Map//EN" uri="dita-oasis/1.1/map.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Map Group Domain//EN" uri="dita-oasis/1.1/mapGroup.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Map Group Domain//EN" uri="dita-oasis/1.1/mapGroup.mod"/>	
+	<public publicId="-//OASIS//DTD DITA BookMap//EN" uri="dita-oasis/1.1/bookmap.dtd"/>
+	<public publicId="-//OASIS//ELEMENTS DITA BookMap//EN" uri="dita-oasis/1.1/bookmap.mod"/>
+	<!-- DITA Domains -->
+	<public publicId="-//OASIS//ELEMENTS DITA Highlight Domain//EN" uri="dita-oasis/1.1/highlightDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Highlight Domain//EN" uri="dita-oasis/1.1/highlightDomain.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Indexing Domain//EN" uri="dita-oasis/1.1/indexingDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Indexing Domain//EN" uri="dita-oasis/1.1/indexingDomain.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Programming Domain//EN" uri="dita-oasis/1.1/programmingDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Programming Domain//EN" uri="dita-oasis/1.1/programmingDomain.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Software Domain//EN" uri="dita-oasis/1.1/softwareDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Software Domain//EN" uri="dita-oasis/1.1/softwareDomain.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA User Interface Domain//EN" uri="dita-oasis/1.1/uiDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA User Interface Domain//EN" uri="dita-oasis/1.1/uiDomain.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Utilities Domain//EN" uri="dita-oasis/1.1/utilitiesDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Utilities Domain//EN" uri="dita-oasis/1.1/utilitiesDomain.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA XNAL Domain//EN" uri="dita-oasis/1.1/xnalDomain.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA XNAL Domain//EN" uri="dita-oasis/1.1/xnalDomain.ent"/>
+	<!-- DITA Common -->
+	<public publicId="-//OASIS//ELEMENTS DITA Common Elements//EN" uri="dita-oasis/1.1/commonElements.mod"/>
+	<public publicId="-//OASIS//ENTITIES DITA Common Elements//EN" uri="dita-oasis/1.1/commonElements.ent"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Metadata//EN" uri="dita-oasis/1.1/metaDecl.mod"/>
+	<public publicId="-//OASIS//ELEMENTS DITA Exchange Table Model//EN" uri="dita-oasis/1.1/tblDecl.mod"/>
+	<public publicId="-//OASIS//ELEMENTS DITA CALS Tables//EN" uri="dita-oasis/1.1/tblDecl.mod"/>
+	<!-- DITA Specializations -->
+	<public publicId="-//Trisoft//DTD DITA Apiref//EN" uri="dita-oasis/1.1/apiref.dtd"/>
+	<public publicId="-//Trisoft//ELEMENTS DITA Apiref//EN" uri="dita-oasis/1.1/apiref.mod"/>
+	<!-- End of XML Catalog data for OASIS version-less DITA pointing to latest -->	
+
+	<!-- ESRI -->
+	
+	<!-- shared -->
+	<public publicId="-//ESRI//ELEMENTS DITA Common//EN" uri="dita-esri/1.0/esri_common.mod"/>
+	<public publicId="-//ESRI//ENTITIES DITA Common//EN" uri="dita-esri/1.0/esri_common.ent"/>
+
+	<public publicId="-//ESRI//ELEMENTS DITA API Common//EN" uri="dita-esri/1.0/esri_apicommon.mod"/>
+	<public publicId="-//ESRI//ENTITIES DITA API Common//EN" uri="dita-esri/1.0/esri_apicommon.ent"/>
+	
+	<!-- domain -->
+	<public publicId="-//ESRI//ELEMENTS DITA General Domain//EN" uri="dita-esri/1.0/esri_generaldomain.mod"/>
+	<public publicId="-//ESRI//ENTITIES DITA General Domain//EN" uri="dita-esri/1.0/esri_generaldomain.ent"/>
+	
+	<public publicId="-//ESRI//ELEMENTS DITA UI Domain//EN" uri="dita-esri/1.0/esri_uidomain.mod"/>
+	<public publicId="-//ESRI//ENTITIES DITA UI Domain//EN" uri="dita-esri/1.0/esri_uidomain.ent" />
+
+	<public publicId="-//ESRI//ELEMENTS DITA Widget Domain//EN" uri="dita-esri/1.0/esri_widgetdomain.mod"/>
+	<public publicId="-//ESRI//ENTITIES DITA Widget Domain//EN" uri="dita-esri/1.0/esri_widgetdomain.ent"/>
+	
+	<!-- topics -->
+	<public publicId="-//ESRI//ELEMENTS DITA ArcpyFunction//EN" uri="dita-esri/1.0/esri_arcpyfunction.mod"/>
+	<public publicId="-//ESRI//DTD DITA ArcpyFunction//EN" uri="dita-esri/1.0/esri_arcpyfunction.dtd"/>
+	
+	<public publicId="-//ESRI//ELEMENTS DITA ArcpyProperty//EN" uri="dita-esri/1.0/esri_arcpyproperty.mod"/>
+	<public publicId="-//ESRI//DTD DITA ArcpyProperty//EN" uri="dita-esri/1.0/esri_arcpyproperty.dtd"/>
+
+	<public publicId="-//ESRI//ELEMENTS DITA ArcpyClass//EN" uri="dita-esri/1.0/esri_arcpyclass.mod"/>
+	<public publicId="-//ESRI//DTD DITA ArcpyClass//EN" uri="dita-esri/1.0/esri_arcpyclass.dtd"/>
+	
+	
+	<public publicId="-//ESRI//ELEMENTS DITA Concept//EN" uri="dita-esri/1.0/esri_concept.mod"/>
+	<public publicId="-//ESRI//DTD DITA Concept//EN" uri="dita-esri/1.0/esri_concept.dtd"/>
+
+	<public publicId="-//ESRI//ELEMENTS DITA GPTool//EN" uri="dita-esri/1.0/esri_gptool.mod"/>
+	<public publicId="-//ESRI//DTD DITA GPTool//EN" uri="dita-esri/1.0/esri_gptool.dtd"/>
+	
+	<public publicId="-//ESRI//ELEMENTS DITA Task//EN" uri="dita-esri/1.0/esri_task.mod"/>
+	<public publicId="-//ESRI//DTD DITA Task//EN" uri="dita-esri/1.0/esri_task.dtd"/>
+	
+	<public publicId="-//ESRI//ELEMENTS DITA Workflow//EN" uri="dita-esri/1.0/esri_workflow.mod"/>
+	<public publicId="-//ESRI//DTD DITA Workflow//EN" uri="dita-esri/1.0/esri_workflow.dtd"/>
+	
+	<public publicId="-//ESRI//ELEMENTS DITA ArcPyMap//EN" uri="dita-esri/1.0/esri_arcpymap.mod"/>
+	<public publicId="-//ESRI//DTD DITA ArcPyMap//EN" 	   uri="dita-esri/1.0/esri_arcpymap.dtd"/>
+
+	<public publicId="-//ESRI//ELEMENTS DITA GPToolboxMap//EN" uri="dita-esri/1.0/esri_gptoolboxmap.mod"/>
+	<public publicId="-//ESRI//DTD DITA GPToolboxMap//EN" 	   uri="dita-esri/1.0/esri_gptoolboxmap.dtd"/>
+
+	<!-- glossary dtd: tchen: the doctype pattern does not follow other doctype-->
+	
+	<public publicId="-//ESRI//ELEMENTS DITA ESRI_Term//EN" uri="dita-esri/1.0/esri_term.mod"/>
+	<public publicId="-//ESRI//DTD DITA ESRI_Term//EN" uri="dita-esri/1.0/esri_term.dtd"/>
+	
+	<public publicId="-//ESRI//ELEMENTS DITA ESRI_Definition//EN" uri="dita-esri/1.0/esri_definition.mod"/>
+	<public publicId="-//ESRI//DTD DITA ESRI_Definition//EN" uri="dita-esri/1.0/esri_definition.dtd"/>
+
+
+</catalog>

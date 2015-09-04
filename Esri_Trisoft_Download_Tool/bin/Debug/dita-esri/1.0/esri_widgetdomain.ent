@@ -1,0 +1,10 @@
+<!-- ============================================================= -->
+<!--                    HIGHLIGHT DOMAIN ENTITIES                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % esri_widget-d-fig     "esri_video | esri_webapp | esri_gizmo_textbox | esri_gizmo_rssbox"                 >
+
+<!ENTITY   esri_widget-d-att     "(topic esri_widget-d)"      >
+
+
+<!-- ================== End Highlight Domain Entities ============ -->

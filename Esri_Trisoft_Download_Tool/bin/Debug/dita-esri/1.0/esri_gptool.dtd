@@ -1,0 +1,123 @@
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATIONS                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-dec     PUBLIC 
+"-//OASIS//ENTITIES DITA Highlight Domain//EN" 
+"../../dita-oasis/1.1/highlightDomain.ent"                                                >
+%hi-d-dec;
+
+<!ENTITY % ut-d-dec     PUBLIC 
+"-//OASIS//ENTITIES DITA Utilities Domain//EN" 
+"../../dita-oasis/1.1/utilitiesDomain.ent"                                                >
+%ut-d-dec;
+
+<!ENTITY % esri_general-d-dec     PUBLIC 
+"-//ESRI//ENTITIES DITA General Domain//EN" 
+"esri_generaldomain.ent"                                                >
+%esri_general-d-dec;
+
+<!ENTITY % esri_ui-d-dec     PUBLIC 
+"-//ESRI//ENTITIES DITA UI Domain//EN" 
+"esri_uidomain.ent"                                                >
+%esri_ui-d-dec;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE DECLARATIONS              -->
+<!-- ============================================================= -->
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN EXTENSIONS                          -->
+<!-- ============================================================= -->
+<!--                    One for each extended base element, with
+                        the name of the domain(s) in which the
+                        extension was declared                     -->
+
+<!ENTITY % fig                     "fig | %ut-d-fig; | %esri_general-d-fig;"       >
+<!ENTITY % keyword             "keyword | %esri_ui-d-keyword; | %esri_general-d-keyword;"       >
+<!ENTITY % note                "note | %esri_general-d-note;"       >
+<!ENTITY % ph                  "ph | %hi-d-ph; | %esri_ui-d-ph; | %esri_general-d-ph;"       >
+<!ENTITY % pre                 "pre | %esri_general-d-pre;"       >
+<!ENTITY % ul                "ul | %esri_general-d-ul;"       >
+<!ENTITY % xref                 "xref | %esri_general-d-xref;"      >
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ATTRIBUTE EXTENSIONS                -->
+<!-- ============================================================= -->
+<!ENTITY % props-attribute-extensions  ""                            >
+<!ENTITY % base-attribute-extensions   ""                            >
+
+
+<!-- ============================================================= -->
+<!--                    TOPIC NESTING OVERRIDE                     -->
+<!-- ============================================================= -->
+<!--                    Redefine the infotype entity to exclude 
+                        other topic types and disallow nesting     -->
+
+<!ENTITY % esri_gptool-info-types "esri_gptool">
+
+
+<!-- ============================================================= -->
+<!--                    DOMAINS ATTRIBUTE OVERRIDE                 -->
+<!-- ============================================================= -->
+<!--                    Must be declared ahead of the DTDs, which
+                        puts @domains first in order               -->
+
+<!ENTITY included-domains 
+                        "&hi-d-att; &esri_general-d-att; &esri_ui-d-att;"               >
+
+
+<!-- ============================================================= -->
+<!--                    TOPIC ELEMENT INTEGRATION                  -->
+<!-- ============================================================= -->
+
+<!ENTITY % topic-type PUBLIC 
+"-//OASIS//ELEMENTS DITA Topic//EN" 
+"../../dita-oasis/1.1/topic.mod">
+  %topic-type;
+
+<!ENTITY % esri_common      PUBLIC 
+"-//ESRI//ELEMENTS DITA Common//EN"
+"esri_common.mod"   >
+%esri_common;
+
+<!ENTITY % esri_apicommon      PUBLIC
+"-//ESRI//ELEMENTS DITA API Common//EN"
+"esri_apicommon.mod"   >
+%esri_apicommon;
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ELEMENT INTEGRATION                 -->
+<!-- ============================================================= -->
+
+<!ENTITY % hi-d-def     PUBLIC 
+"-//OASIS//ELEMENTS DITA Highlight Domain//EN" 
+"../../dita-oasis/1.1/highlightDomain.mod"                                         >
+%hi-d-def;
+
+<!ENTITY % ut-d-def     PUBLIC 
+"-//OASIS//ELEMENTS DITA Utilities Domain//EN" 
+"../../dita-oasis/1.1/utilitiesDomain.mod"                                                >
+%ut-d-def;
+
+<!ENTITY % esri_general-d-def     PUBLIC 
+"-//ESRI//ELEMENTS DITA General Domain//EN" 
+"esri_generaldomain.mod"                                                >
+%esri_general-d-def;
+
+<!ENTITY % esri_ui-d-def     PUBLIC 
+"-//ESRI//ELEMENTS DITA UI Domain//EN" 
+"esri_uidomain.mod"                                                >
+%esri_ui-d-def;
+
+<!ENTITY % esri_gptool-typemod PUBLIC 
+"-//ESRI//ELEMENTS DITA GPTool//EN" 
+"esri_gptool.mod">
+%esri_gptool-typemod;
+
+
+<!-- ================== End DITA Concept DTD  ==================== -->

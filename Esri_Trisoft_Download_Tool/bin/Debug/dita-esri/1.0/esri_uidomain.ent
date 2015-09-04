@@ -1,0 +1,15 @@
+
+<!-- ============================================================= -->
+<!--                    ELEMENT EXTENSION ENTITY DECLARATIONS      -->
+<!-- ============================================================= -->
+
+<!ENTITY % esri_ui-d-keyword        "esri_wintitle | esri_shortcut"                     >
+<!ENTITY % esri_ui-d-ph             "esri_uicontrol | esri_menucascade | esri_usertext | esri_codeph | esri_fieldname | esri_path"                    >
+
+
+<!-- ============================================================= -->
+<!--                    DOMAIN ENTITY DECLARATION                  -->
+<!-- ============================================================= -->
+
+
+<!ENTITY esri_ui-d-att "(topic esri_ui-d)">

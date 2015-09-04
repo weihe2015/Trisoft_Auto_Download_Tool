@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5">
+      <s:element name="GetProgressId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEventId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutProgressId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgressIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgressIdResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutProgressId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plDetailId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedEventData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbIncludeData" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventDetailResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextEventDetailDataChunk">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plDetailId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOffSet" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="piSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbOutBytes" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNextEventDetailDataChunkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNextEventDetailDataChunkResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOffSet" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="piSize" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbOutBytes" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveEventsByProgressIds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="palProgressIds" type="tns:ArrayOfLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLevelFilter" type="tns:eEventLevel" />
+            <s:element minOccurs="1" maxOccurs="1" name="plLastDetailId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLEventDataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedEventData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="eEventLevel">
+        <s:restriction base="s:string">
+          <s:enumeration value="Exception" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="Configuration" />
+          <s:enumeration value="Information" />
+          <s:enumeration value="Verbose" />
+          <s:enumeration value="Debug" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="RetrieveEventsByProgressIdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveEventsByProgressIdsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveEventsByParentProgressIds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="palParentProgressIds" type="tns:ArrayOfLong" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLevelFilter" type="tns:eEventLevel" />
+            <s:element minOccurs="1" maxOccurs="1" name="plLastDetailId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLEventDataFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedEventData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveEventsByParentProgressIdsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveEventsByParentProgressIdsResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveEventOverview">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pasEventTypes" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatusFilter" type="tns:eProgressStatusFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="pdModifiedSince" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="peUserFilter" type="tns:eUserFilter" />
+            <s:element minOccurs="0" maxOccurs="1" name="psXMLRequestedEventData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="eProgressStatusFilter">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="Busy" />
+              <s:enumeration value="Success" />
+              <s:enumeration value="Warning" />
+              <s:enumeration value="Failed" />
+              <s:enumeration value="All" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:simpleType name="eUserFilter">
+        <s:restriction base="s:string">
+          <s:enumeration value="Current" />
+          <s:enumeration value="All" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="RetrieveEventOverviewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveEventOverviewResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutXMLEventList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psEventType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDescription" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plParentProgressId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="piMaximumProgress" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutEventId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutProgressId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartEventResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartEventResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psOutEventId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutProgressId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plProgressId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatus" type="tns:eProgressStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="piCurrentProgress" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="piMaximumProgress" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eProgressStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Busy" />
+          <s:enumeration value="Success" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="Calculate" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="EndEventResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EndEventResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEventDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plProgressId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLevel" type="tns:eEventLevel" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDescription" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatus" type="tns:eDetailStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="peDataType" type="tns:eEventDataType" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbData" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutDetailId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="eDetailStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Success" />
+          <s:enumeration value="Warning" />
+          <s:enumeration value="Failed" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="eEventDataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="String" />
+          <s:enumeration value="List" />
+          <s:enumeration value="Xml" />
+          <s:enumeration value="SendEventData" />
+          <s:enumeration value="LogObject" />
+          <s:enumeration value="StatusReport" />
+          <s:enumeration value="CommandOutput" />
+          <s:enumeration value="Other" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AddEventDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddEventDetailResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutDetailId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEventDetailWithProgress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plProgressId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="peLevel" type="tns:eEventLevel" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAction" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psDescription" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="peStatus" type="tns:eDetailStatus" />
+            <s:element minOccurs="1" maxOccurs="1" name="peDataType" type="tns:eEventDataType" />
+            <s:element minOccurs="0" maxOccurs="1" name="pbData" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="piCurrentProgress" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="piMaximumProgress" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutDetailId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddEventDetailWithProgressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddEventDetailWithProgressResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plOutDetailId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteByProgressId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="plProgressId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbDeleteFailedEvents" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pbDeleteBusyEvents" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteByProgressIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteByProgressIdResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="psAuthContext" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProgressIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProgressId" />
+  </wsdl:message>
+  <wsdl:message name="GetProgressIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgressIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetEventDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNextEventDetailDataChunkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNextEventDetailDataChunk" />
+  </wsdl:message>
+  <wsdl:message name="GetNextEventDetailDataChunkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNextEventDetailDataChunkResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEventsByProgressIdsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveEventsByProgressIds" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEventsByProgressIdsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveEventsByProgressIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEventsByParentProgressIdsSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveEventsByParentProgressIds" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEventsByParentProgressIdsSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveEventsByParentProgressIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEventOverviewSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveEventOverview" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEventOverviewSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveEventOverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartEventSoapIn">
+    <wsdl:part name="parameters" element="tns:StartEvent" />
+  </wsdl:message>
+  <wsdl:message name="StartEventSoapOut">
+    <wsdl:part name="parameters" element="tns:StartEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="EndEventSoapIn">
+    <wsdl:part name="parameters" element="tns:EndEvent" />
+  </wsdl:message>
+  <wsdl:message name="EndEventSoapOut">
+    <wsdl:part name="parameters" element="tns:EndEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEventDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEventDetail" />
+  </wsdl:message>
+  <wsdl:message name="AddEventDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEventDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddEventDetailWithProgressSoapIn">
+    <wsdl:part name="parameters" element="tns:AddEventDetailWithProgress" />
+  </wsdl:message>
+  <wsdl:message name="AddEventDetailWithProgressSoapOut">
+    <wsdl:part name="parameters" element="tns:AddEventDetailWithProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteByProgressIdSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteByProgressId" />
+  </wsdl:message>
+  <wsdl:message name="DeleteByProgressIdSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteByProgressIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="EventMonitor25Soap">
+    <wsdl:operation name="GetProgressId">
+      <wsdl:input message="tns:GetProgressIdSoapIn" />
+      <wsdl:output message="tns:GetProgressIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventDetail">
+      <wsdl:input message="tns:GetEventDetailSoapIn" />
+      <wsdl:output message="tns:GetEventDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEventDetailDataChunk">
+      <wsdl:input message="tns:GetNextEventDetailDataChunkSoapIn" />
+      <wsdl:output message="tns:GetNextEventDetailDataChunkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventsByProgressIds">
+      <wsdl:input message="tns:RetrieveEventsByProgressIdsSoapIn" />
+      <wsdl:output message="tns:RetrieveEventsByProgressIdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventsByParentProgressIds">
+      <wsdl:input message="tns:RetrieveEventsByParentProgressIdsSoapIn" />
+      <wsdl:output message="tns:RetrieveEventsByParentProgressIdsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventOverview">
+      <wsdl:input message="tns:RetrieveEventOverviewSoapIn" />
+      <wsdl:output message="tns:RetrieveEventOverviewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartEvent">
+      <wsdl:input message="tns:StartEventSoapIn" />
+      <wsdl:output message="tns:StartEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndEvent">
+      <wsdl:input message="tns:EndEventSoapIn" />
+      <wsdl:output message="tns:EndEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEventDetail">
+      <wsdl:input message="tns:AddEventDetailSoapIn" />
+      <wsdl:output message="tns:AddEventDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEventDetailWithProgress">
+      <wsdl:input message="tns:AddEventDetailWithProgressSoapIn" />
+      <wsdl:output message="tns:AddEventDetailWithProgressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByProgressId">
+      <wsdl:input message="tns:DeleteByProgressIdSoapIn" />
+      <wsdl:output message="tns:DeleteByProgressIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EventMonitor25Soap" type="tns:EventMonitor25Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProgressId">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/GetProgressId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventDetail">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/GetEventDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEventDetailDataChunk">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/GetNextEventDetailDataChunk" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventsByProgressIds">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/RetrieveEventsByProgressIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventsByParentProgressIds">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/RetrieveEventsByParentProgressIds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventOverview">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/RetrieveEventOverview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartEvent">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/StartEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndEvent">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/EndEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEventDetail">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/AddEventDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEventDetailWithProgress">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/AddEventDetailWithProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByProgressId">
+      <soap:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/DeleteByProgressId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EventMonitor25Soap12" type="tns:EventMonitor25Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProgressId">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/GetProgressId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventDetail">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/GetEventDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEventDetailDataChunk">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/GetNextEventDetailDataChunk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventsByProgressIds">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/RetrieveEventsByProgressIds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventsByParentProgressIds">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/RetrieveEventsByParentProgressIds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEventOverview">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/RetrieveEventOverview" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartEvent">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/StartEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndEvent">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/EndEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEventDetail">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/AddEventDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEventDetailWithProgress">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/AddEventDetailWithProgress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteByProgressId">
+      <soap12:operation soapAction="urn:trisoft.be:WebServices:InfoShare:EventMonitor:2.5/DeleteByProgressId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EventMonitor25">
+    <wsdl:port name="EventMonitor25Soap" binding="tns:EventMonitor25Soap">
+      <soap:address location="https://sdlcms.esri.com/infosharews/EventMonitor25.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EventMonitor25Soap12" binding="tns:EventMonitor25Soap12">
+      <soap12:address location="https://sdlcms.esri.com/infosharews/EventMonitor25.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

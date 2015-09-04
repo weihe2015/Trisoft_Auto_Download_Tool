@@ -1,0 +1,49 @@
+
+<!ENTITY % esri_gpenv-att     
+                       'esri_env  (
+Auto_commit |
+Cartographic_coordinate_system |
+Cartographic_Partitions | 
+Cell_size |
+Cluster_tolerance |
+Coincident_points |
+Compression |
+Current_workspace |
+Default_output_Z_value |
+Geograpic_transformations |
+Level_of_comparsion_between_projection_files |
+M_resolution |
+M_tolerance |
+Mask |
+MaintainSpatialIndex |
+NoData |
+Output_Config_Keyword |
+Output_M_domain |
+Output_XY_domain |
+Output_Z_domain |
+Output_coordinate_system |
+Output_extent |
+Output_has_M_values |
+Output_has_Z_values |
+Output_spatial_grid_1_2_3 |
+ParallelProcessingFactor |
+Precision_for_derived_coverages |
+Precision_for_new_coverages |
+Pyramid |
+Qualified_field_names |
+Random_number_generator |
+Raster_statistics |
+Reference_scale |
+ResamplingMethod |
+Scratch_workspace |
+Server_name |
+Snap_raster |
+terrain_memory_usage |
+Tile_size |
+Transfer_field_domain |
+Version |
+XY_resolution |
+XY_tolerance |
+Z_resolution |
+Z_tolerance 
+)  #IMPLIED'                >
